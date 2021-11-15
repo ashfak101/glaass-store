@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     }
     const handleAdmin=e=>{
         const user={email}
-        fetch('http://localhost:5000/users',{
+        fetch('https://whispering-plains-47367.herokuapp.com/users',{
             method: 'PUT',
             headers:{
                 'authorization':`Bearer ${token}`,

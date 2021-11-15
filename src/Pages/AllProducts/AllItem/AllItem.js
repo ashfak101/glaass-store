@@ -8,7 +8,7 @@ const AllItem = () => {
     const [products,setProducts]=useState([])
     useEffect(()=>{
         setLoading(true)
-        fetch('http://localhost:5000/products')
+        fetch('https://whispering-plains-47367.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>{
             setLoading(false)
@@ -17,7 +17,7 @@ const AllItem = () => {
     },[])
     
     return (
-        <Container sx={{mt:4}}>
+        <Container sx={{mt:8}}>
              {
               isLoading &&   <CircularProgress color="success" />
           }

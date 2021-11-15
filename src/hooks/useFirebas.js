@@ -84,11 +84,11 @@ const useFirebase=()=>{
             setLoading(false)
           });
           return()=>unsubscribe;
-    },[])
+    },[auth])
 
     // ----------------------admin
     useEffect(()=>{
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://whispering-plains-47367.herokuapp.com/users/${user.email}`)
       .then(res=>res.json())
       .then(data=>setAdmin(data.admin))
 
@@ -107,7 +107,7 @@ const useFirebase=()=>{
       }
       const saveUserToDb=(email,displayName)=>{
         const user={email,displayName}
-        axios.post('http://localhost:5000/users',user)
+        axios.post('https://whispering-plains-47367.herokuapp.com/users',user)
         .then()
       }
       

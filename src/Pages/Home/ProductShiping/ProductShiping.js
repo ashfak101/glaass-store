@@ -17,7 +17,7 @@ const ProductShiping = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://whispering-plains-47367.herokuapp.com/products/${id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
     },[id])
@@ -32,7 +32,7 @@ const ProductShiping = () => {
         console.log(newOrder);
     }
     const handleShipingSubmit =e=>{
-        axios.post('http://localhost:5000/orders',order)
+        axios.post('https://whispering-plains-47367.herokuapp.com/orders',order)
         .then(res=>{
             if(res.data.insertedId){
                 setSuccess(true)
@@ -44,7 +44,7 @@ const ProductShiping = () => {
     return (
         <div>
            
-            <Container>
+            <Container sx={{mt:8}}>
             <Grid container spacing={2}>
                     <Grid container item xs={12} sm={12} md={8}>
                         <img src={img} alt="" />

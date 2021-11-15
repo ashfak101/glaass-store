@@ -11,7 +11,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
-import ProductShiping from './Pages/Home/ProductShiping/ProductShiping';
+
 import ProductBooked from './Pages/ProductBooked/ProductBooked';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AllProducts from './Pages/AllProducts/AllProducts/AllProducts';

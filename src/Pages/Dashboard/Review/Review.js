@@ -17,7 +17,7 @@ const Review = () => {
         console.log(newInfo);
     }
     const handleSubmit=e=>{
-        axios.post('http://localhost:5000/reviews',review)
+        axios.post('https://whispering-plains-47367.herokuapp.com/reviews',review)
         .then(res=>{
             if(res.data.insertedId){
                 setSuccess(true)

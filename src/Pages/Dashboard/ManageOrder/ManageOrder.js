@@ -6,12 +6,12 @@ import React, { useEffect, useState } from 'react';
 const ManageOrder = () => {
         const[orders,setOrders]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://whispering-plains-47367.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])
     const handleOnClick=(id)=>{
-        const url=`http://localhost:5000/orders/${id}`
+        const url=`https://whispering-plains-47367.herokuapp.com/orders/${id}`
         fetch(url,{
             method: 'PUT',
             // headers:{

@@ -10,7 +10,7 @@ const ManageAllProduct = () => {
       const [products,setProducts]=useState([])
       useEffect(()=>{
           setLoading(true)
-          fetch('http://localhost:5000/products')
+          fetch('https://whispering-plains-47367.herokuapp.com/products')
           .then(res=>res.json())
           .then(data=>{
               setLoading(false)
@@ -20,7 +20,7 @@ const ManageAllProduct = () => {
       const handleCancel=id=>{
         const proceed= window.confirm('Are you Sure,you want delete?')
             if(proceed){
-                const url=`http://localhost:5000/products/${id}`;
+                const url=`https://whispering-plains-47367.herokuapp.com/products/${id}`;
                 fetch(url,{
                     method:'DELETE',
                 

@@ -20,7 +20,7 @@ const AddProducts = () => {
     // Send Data to Database or server
     const handleProductsSubmit=e=>{
 
-        axios.post('http://localhost:5000/products',productsData)
+        axios.post('https://whispering-plains-47367.herokuapp.com/products',productsData)
         .then(res=>{
             if(res.data.insertedId){
                 setSuccess(true)

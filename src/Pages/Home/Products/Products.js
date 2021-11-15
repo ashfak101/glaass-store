@@ -9,7 +9,7 @@ const Products = () => {
         const [isLoading,setLoading]=useState(true)
         useEffect(()=>{
             setLoading(true)
-            fetch('http://localhost:5000/products')
+            fetch('https://whispering-plains-47367.herokuapp.com/products')
             .then(res=>res.json())
             .then(data=>{
                 setLoading(false)

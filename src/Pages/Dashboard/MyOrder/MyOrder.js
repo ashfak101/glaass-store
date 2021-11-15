@@ -7,15 +7,15 @@ const MyOrder = () => {
         const [myorder,setMyorder]=useState([]);
 
         useEffect(()=>{
-            const url=`http://localhost:5000/orders/${user?.email}`
+            const url=`https://whispering-plains-47367.herokuapp.com/orders/${user?.email}`
             fetch(url)
             .then(res=>res.json())
             .then(data=>setMyorder(data))
-        },[])
+        },[user?.email])
         const handleCancel=id=>{
             const proceed= window.confirm('Are you Sure,you want delete?')
                 if(proceed){
-                    const url=`http://localhost:5000/orders/${id}`;
+                    const url=`https://whispering-plains-47367.herokuapp.com/orders/${id}`;
                     fetch(url,{
                         method:'DELETE',
                     
