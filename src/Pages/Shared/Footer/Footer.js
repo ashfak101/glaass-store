@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div style={{backgroundColor:'#181038',color:'#fff'}} >
+        <div style={{backgroundColor:'#181038',color:'#fff',marginTop:10}} >
             <Container>
             <Grid container spacing={2}>
                     <Grid item xs={12} sm={12} md={3} sx={{textAlign:'left'}}>

@@ -25,11 +25,29 @@ const Navbar = () => {
   const useStyle =makeStyles({
     navItem:{
       color:'#fff',
-      textDecoration:'none'
+      textDecoration:'none',
+      position:'relative',
+      transition:'3s',
+      '&:hover':{
+       
+        '&::before':{
+          content:'""',
+          position:'absolute',
+          width:'100%',
+          borderBottom:'5px solid #fff',
+          bottom:'-50%',
+          left: '0',
+         
+  
+        }
+        , transition:'3s',
+      },
+      
     },
     navIcon:{
       [theme.breakpoints.up('sm')]:{
-        display:'none'
+        display:'none',
+        
       }
 
     },
@@ -94,6 +112,7 @@ const [state, setState] = React.useState(false);
     
        
     </Box>)
+    
     return (
  	<>
         <Box sx={{ flexGrow: 1,backgroundColor:'#181038',color:'#fff' }}>
@@ -111,7 +130,7 @@ const [state, setState] = React.useState(false);
               <MenuIcon />
             </IconButton>
             <Typography className={logo} variant="h6" component="div" sx={{ flexGrow: 1, fontWeight:'700' }}>
-              Glass Store
+              GLASS STORE
             </Typography>
            <Box className={navLink}>
            <NavLink className={navItem} to='/home'><Button sx={{  fontWeight:'700' }} color="inherit">Home</Button></NavLink>
